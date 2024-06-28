@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  padding: 0px 40px;
+  background-color:#F6F6F6;
+  font-size: 20px;
+  font-family: "Quicksand", sans-serif;
+  font-weight:500;
+  font-style:normal;
+}
+
+table {
+  width: 100%; 
+}
+
+td {
+  padding: 20px;
+  /*border: 1px solid #ddd; */ /*used to find borders of each segment*/
+}
+
+
+.navigation {
+  text-align: right;
+}
+
+.navigation h2 {
+  text-align:  left;
+  color:#812E1F
+}
+
+table h2 {
+  text-align:  left;
+  color:#812E1F
+}
+
+
+.navigation table {
+  width: 100%;
+}
+
+.navigation td {
+  display: inline-block;  
+  margin-left: 10px; 
+  border: none; 
+}
+
+.navigation a {
+  text-decoration: none;
+  
+}
+
+a {
+    color: black;
+}
+
+.button {
+  padding: 15px 30px;
+  background-color: #812E1F;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  display: inline-block; 
+  margin-right: 10px; 
+  font-size: 20px;
+
+}
+.button:hover, .button_gray:hover {
+    background-color: #787878;
+}
+
+.button_gray {
+  padding: 15px 30px;
+  background-color: #303033;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  display: inline-block; 
+  margin-right: 10px;  
+  font-size: 20px;
+
+}
+
+
+a:hover {
+    color:#812E1F;
+    text-decoration:underline;
+}
+
+.heading {
+    font-size: 70px;
+    font-weight: bold;
+    font-family: "Quicksand", sans-serif;
+    font-style: normal;
+}
+
+.welcome {
+    font-size: 20px;
+}
+
+content {
+    padding:30px;
+}
+
+.shelf {
+    padding:20px;
+}
+
+.shelf img {
+    margin-right: 20px; 
+}
+
+.shelf .first {
+    margin-left: 60px; 
+}
+
+.wrapper {
+    background-image: url("images/crumble.jpeg");
+    background-size: 2500px;
+    background-repeat: no-repeat;
+    background-position: center; 
+    vertical-align: middle;
+}
+
+button:hover {
+    background-color: darkgrey;
+    color:black;
+}
+
+footer {
+    color: #fff;
+    padding:20px; 
+    position:fixed; 
+    border: 0; 
+    width:100%;
+    float:bottom;
+
+}
+
+fieldset {
+  border-radius:10px;
+  border-color:#812E1F;
+  border-width:2px;
+}
+
+h1 {
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+
+
+}
+h1 a {
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Quicksand", sans-serif;
+}
+
+
+input {
+  font-size: 25px;
+}
+.input {
+  font-size: 25px;
+}
+
+.hero {
+  width: 300px;
+}

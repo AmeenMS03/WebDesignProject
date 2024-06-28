@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Tools</title>
+  <link rel="icon" type="image = x-icon" href = "images/book.jpeg"> 
+  <link rel="stylesheet" href="style1.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <script>
+    function calculateDays() {
+      var pages = document.getElementById("num1");
+      var pagesDay = document.getElementById("num2");
+      var totalDays = document.getElementById("result");
+
+      var pageNumbers = parseInt(pages.value);
+      var pagesDayValue = parseInt(pagesDay.value);
+
+      var days = (pageNumbers / pagesDayValue);
+      totalDays.innerHTML = "Days: " + days;
+    }
+    function membershipStatus() {
+      var months = document.getElementById("months");
+      var monthsValue = parseInt(months.value);
+      var membType = document.getElementById("membType");
+
+      if (monthsValue >= 48) {
+        membType.innerHTML = "You have a Gold Membership";
+      } else if (monthsValue >= 24) {
+        membType.innerHTML = "You Have Silver Membership";
+      } else if (monthsValue >= 12) {
+        membType.innerHTML = "You have Bronze Membership";
+      } else {
+        membType.innerHTML = "You are not eligible yet";
+      }
+    }
+    function readingTime() {
+      var pages = document.getElementById("num1");
+      var pageNumbers = parseInt(pages.value);
+      var avgWords = 250; 
+
+      var words = 0;
+      for (var i = 1; i <= pageNumbers; i++) {
+        words = words + avgWords;
+      }
+
+      var avgSpeed = 300; 
+      var estimatedMinutes = (words / avgSpeed);
+
+      var result = document.getElementById("result");
+      result.innerHTML = "Estimated Reading Time: " + estimatedMinutes + " minutes (Assuming an average reading speed of 300 words per minute)";
+    }
+  </script>
+</head>
+<body>
+  <table>
+    <tr>
+      <table>
+        <tr>
+          <td class="hero">
+            <h2>Al Saqr National Library</h2>
+          </td>
+          <td class="navigation" colspan="3">
+            <table>
+              <tr> 
+                <td><a href="index.html">Home</a></td>
+                <td><a href="free_books.html">Free Bookshelf</a></td>
+                <td><a href="study_room.html">Study Room</a></td>
+                <td><a href="tools.html" style="font-weight:bold; color:#812E1F">Our Tools</a></td>
+                <td><a href="about_us.html">About Us</a></td>
+                <td><a href="membership.html"><div class="button">Signup For Membership</div></a></td>
+              </tr>
+            </table>     
+          </td>
+        </tr>
+      </table>
+    </tr>
+
+
+    <tr>
+      <td class="content" colspan="2">
+        <table>
+          <tr>
+            <td colspan="2">
+              <h1>Calculate Reading Time</h1>
+              <h3>Calculate how many days required to finish a book</h3>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <fieldset>
+                <p>Pages: <input type="number" id="num1" required></p>
+                <p>Pages per day: <input type="number" id="num2" required></p>
+                <p><button onclick="calculateDays()" class="button">Calculate</button></p>
+                <p id="result">Days: </p>
+                <p><button onclick="readingTime()" class="button">Calculate Reading Time</button></p>
+
+              </fieldset>
+            </td>
+            <td rowspan="1">
+              <img src="images/moving_book.gif" width="300px">
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="content" colspan="2">
+        <table>
+          <tr>
+            <td colspan="1">
+              <h1>Existing Membership Type</h1>
+              <h3>Check What type of Membership you have</h3>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Number of Months with Membership <input type="number" id="months"> 
+              <p><button onclick="membershipStatus()" class="button">Check</button></p>
+              <p id="membType"></p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <br><br> <br>
+        <hr style="color:grey; border-width:3px">
+        <center><p>&copy;2024 Al Saqr National Library, All rights reserved.</p>
+        </center>
+      </td>
+    </tr>
+
+  </table>
+</body>
+</html>
